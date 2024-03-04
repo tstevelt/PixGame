@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+
+<script>
+
+function MakeURL ()
+{
+	var Release = document.getElementById('Release').value;
+	var ImageSet = document.getElementById('ImageSet').value;
+	var Mode = document.getElementById('Mode').value;
+
+	if ( Mode == 'S' )
+	{
+		var URL = Release + '.cgi?ImageSet=' + ImageSet + '&showall=1';
+	}
+	else
+	{
+		var URL = Release + '.cgi?ImageSet=' + ImageSet + '&mode=' + Mode;
+	}
+	
+	if ( Release == 'PixGameDev' && Mode == 'R' )
+	{
+		URL = URL + '&nodelay=1';
+	}
+
+	return ( URL );
+}
+
+function Go()
+{
+	var URL = MakeURL ();
+
+	window.open ( URL )
+}
+
+function ShowURL ()
+{
+	var URL = MakeURL ();
+	var div = document.getElementById('url');
+
+	div.innerHTML = 'https://www.silverhammersoftware.com/' + URL;
+}
+
+</script>
+
+</head>
+
+<body onload='javascript:ShowURL();'>
+
+<p>
+<select id='Release' name='Release' onchange='javascript:ShowURL();'>
+<option value='PixGame'>PixGame</option>
+<option value='PixGameDev'>PixGameDev</option>
+</select>
+
+<select id='ImageSet' name='ImageSet' onchange='javascript:ShowURL();'>
+<option value='CLIPART'>CLIPART</option>
+<option value='UNICORN'>UNICORN</option>
+<option value='CARDS'>CARDS</option>
+<option value='BIKINI'>BIKINI</option>
+</select>
+
+<select id='Mode' name='Mode' onchange='javascript:ShowURL();'>
+<option value='N'>Number</option>
+<option value='W'>Word</option>
+<option value='A'>Arithmetic</option>
+<option value='R'>Random</option>
+<option value='S'>Show all</option>
+</select>
+
+<input type='button' id='go' value='Go' onclick='javascript:Go();'><br>
+
+<p>
+<div id='url'><div>
+
+</body>
+</html>
+

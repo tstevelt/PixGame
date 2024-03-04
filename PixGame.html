@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- link rel='stylesheet' href='PixGame.css?version=20221101' -->
+<script src='Functions.js'></script>
+
+<script>
+function GetWindowDimensions ()
+{
+	document.getElementById('Width').value = window.innerWidth;
+	document.getElementById('Height').value = window.innerHeight;
+	document.PixGame.submit();
+}
+</script>
+
+</head>
+
+<body onload='javascript:GetWindowDimensions();'>
+<form name='PixGame' id='PixGame' action="PixGame.cgi" method='POST' enctype='application/x-www-form-urlencoded'>
+
+<input type='hidden' id='Width' name='Width' value='0'>
+<input type='hidden' id='Height' name='Height' value='0'>
+
+
+</form>
+</body>
+</html>
