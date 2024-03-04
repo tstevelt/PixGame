@@ -17,5 +17,7 @@
 3. Solve a arithmetic problem
 4. Watch a random graphic for 5 seconds.
 
+Some image sets are available at <https://github.com/tstevelt/PixGame_ImageSets>
+
 Game is currently available at <https://www.silverhammersoftware.com/TestMenu.html>
 
