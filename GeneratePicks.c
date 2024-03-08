@@ -2,7 +2,9 @@
 	Program : GeneratePicks.c
 	Author  : Tom Stevelt
 	Date    : 2022
-	Synopsis: progname
+	Synopsis: Generate three picks for the next test. Not used before. Select
+				one to display initially.  Scamble the three, so selected
+				one is not always first.
 	Return  : 
 ----------------------------------------------------------------------------*/
 //     PixGame
