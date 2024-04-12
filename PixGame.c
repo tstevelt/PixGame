@@ -34,7 +34,7 @@ int main ( int argc, char *argv[] )
 	GAME_RECORD	*ptr;
 	char		*cp;
 
-	seed_random_with_usec ();
+	shs_seed_random ();
 
 	Shuffle = 1;
 	NoDelay = 0;
